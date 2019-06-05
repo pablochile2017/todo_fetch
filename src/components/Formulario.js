@@ -2,10 +2,11 @@ import React, { Component} from 'react';
 
 class Formulario extends Component {
 	capturaText = (e) => {
-		const { value, name } = e.target;
-				this.setState({
-				[name]: value
-			})
+		this.setState({
+            label: e.target.value,
+            done: true
+        })
+
 				console.log("guardando texto");
 	}
 
@@ -18,15 +19,15 @@ class Formulario extends Component {
 
 	render(){
 		return(
-					<input 
+					<input
 					type="text"
-					name="contenido" 
-					className="form-control" 
-					id="texto"  
+					name="contenido"
+					className="form-control"
+					id="texto"
 					placeholder="contenido"
-					onChange={this.capturaText} 
+					onChange={this.capturaText}
 					onKeyPress={ this.enviarText }
-					/>	
+					/>
 				)
 			}
 }
