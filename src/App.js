@@ -34,8 +34,8 @@ class App extends Component {
 
 
         agregarTexto = (texto) => {
-          /*this.setState({
-            /base: [...this.state.base, texto]*/
+          this.setState({ base: [...this.state.base, texto]})
+
                         fetch('https://assets.breatheco.de/apis/fake/todos/user/juan', {
                 method: "PUT",
                 body: JSON.stringify([...this.state.base, texto]),
@@ -61,11 +61,11 @@ class App extends Component {
 
 
         borrarTexto = (index) => {
-           /* this.setState({
+           this.setState({
               base: this.state.base.filter((e,i) => {
                 return i !== index
               })
-            })*/
+            })
 
                 fetch('https://assets.breatheco.de/apis/fake/todos/user/juan', {
                 method: "PUT",
