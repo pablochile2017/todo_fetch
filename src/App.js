@@ -117,6 +117,7 @@ class App extends Component {
 
                     <Formulario agregarAhora={ this.agregarTexto } />
                     { base }
+                    <div className="list-group-item ">{base.length} items </div>
                   </div>
 
 
